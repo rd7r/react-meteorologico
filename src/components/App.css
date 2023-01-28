@@ -10,13 +10,44 @@
 input{
   background-color: #fff;
   border: 0;
+  border-radius: 20px;
   margin: 5% 0 3% 0;
+  outline-style: none;
+  height: 25px;
+  width: 17%;
+  font-size: 15px;
+  text-align: center;
 }
 
 .card {
-  display: flex;
+  height: 42%;
+  box-shadow: 0px 10px 10px -3px #000;
+  background-color: transparent;
+  position: relative;
+  padding: 10px;
 }
 
-.read-the-docs {
-  color: #888;
+h1{
+  line-height:0;
+  font-weight: 300;
+  color: #333;
+  text-transform: uppercase;
+  padding: 0 0 0px 16px;
+}
+h2{
+  line-height:0;
+  font-weight: 300;
+  font-size: 64px;
+  color: #333;
+  text-transform: uppercase;
+  padding: 0 0 0 16px;
+}
+h3{
+  line-height:0;
+  font-size: 15px;
+  font-weight: 20;
+  transform: rotate(-90deg);
+  position: absolute;
+  top: 55px;
+  right: -25px;
 }

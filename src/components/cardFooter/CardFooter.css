@@ -1,0 +1,18 @@
+footer{
+    display: flex;
+    width: 80%;
+    padding: 12px 16px;
+    margin: 0 auto;
+    border: 2px solid black;
+    border-radius: 10px;
+    text-align: center;
+    justify-content: space-evenly;
+}
+span{
+    display: block;
+}
+strong{
+    color: #000;
+    font-weight: 500;
+    margin-right: 10px;
+}

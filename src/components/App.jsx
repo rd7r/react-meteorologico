@@ -1,19 +1,24 @@
-import { useState,useEffect } from 'react'
-import './App.css'
-import { CardIcon } from './cardIcon/CardIcon';
+import { useState } from 'react';
+import { CardFooter } from './cardFooter/CardFooter';
 import { getWeatherFrom } from './Service/Weather';
-const weatherPromise = await getWeatherFrom();
-console.log(weatherPromise.conditionText);
+const weather = await getWeatherFrom();
+import './App.css';
+
 function App() {
+  const [departament, setDepartament] = useState('hola');
   return (
       <div className='container'>
-        <input type="text" />
+        <input type="text" onClick={()=>{console.log(departament)}}/>
         <div className='card'>
-          <img src="https://source.unsplash.com/100x100/?woman-designer" alt="avatar" />
-          <h2></h2>
-          <h3>New York</h3>
-          <p>Temperatura 17°C</p>
-          <CardIcon/>
+          <h1>{weather.name}</h1>
+          <h2>{weather.temperatura}°</h2>
+          <h3>{weather.conditionText}</h3>
+          <img src={weather.conditionIcon} alt={weather.conditionIcon} />
+          <CardFooter
+            humidity={weather.humidity}
+            windspeed={weather.windSpeed}
+            feelsLike={weather.feelsLike}
+          />
         </div>
       </div>
   )

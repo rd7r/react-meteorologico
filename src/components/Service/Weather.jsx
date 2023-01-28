@@ -6,17 +6,18 @@ const FETCH_OPTIONS = {
     }
   };
 
-export const getWeatherFrom = async(query = 'La Paz') => {
+export const getWeatherFrom = async(query = 'Oruro') => {
     const res = await fetch(`https://weatherapi-com.p.rapidapi.com/current.json?q=${query}`, FETCH_OPTIONS)
     const data = await res.json();
     const { location, current } = data;
     const { name, country, localtime } = location;
     const { condition, humidity, feelslike_c, is_day, temp_c, wind_kph, wind_dir } = current;
-    const { code,text } = condition;
+    const { code,text,icon } = condition;
     
     return {
         conditionCode: code,
         conditionText: text,
+        conditionIcon: icon,
         country,
         localtime,
         name,
