@@ -7,16 +7,30 @@
   align-items: center;
 }
 
+form{
+  margin: 5% 0 3% 0;
+  display: flex;
+  justify-content: space-between;
+}
+
 input{
   background-color: #fff;
   border: 0;
   border-radius: 20px;
-  margin: 5% 0 3% 0;
   outline-style: none;
   height: 25px;
-  width: 17%;
+  width: 70%;
   font-size: 15px;
   text-align: center;
+}
+
+button{
+  background-color: #208dd9;
+  border: none;
+  color: #fff;
+  border-radius: 20px;
+  padding: 7px 17px;
+  cursor: pointer;
 }
 
 .card {
@@ -48,6 +62,6 @@ h3{
   font-weight: 20;
   transform: rotate(-90deg);
   position: absolute;
-  top: 55px;
-  right: -25px;
+  top: 95px;
+  right: -20px;
 }
